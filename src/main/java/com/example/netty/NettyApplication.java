@@ -10,8 +10,10 @@ public class NettyApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(NettyApplication.class, args);
-        Invoker invoker = InvokerHolder.getInvoker((short)1, (short)1);
+        Invoker invoker = InvokerHolder.getInvoker((short)2, (short)1);
         invoker.invoke(null);
+        Invoker invoker1 = InvokerHolder.getInvoker((short)1, (short)1);
+        invoker1.invoke(null);
     }
 
 }
